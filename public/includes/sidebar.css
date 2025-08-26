@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; 
+
+}
+
+
+/* --- HEADER ---*/
+
+header{
+    background-color: #4682B4; 
+    padding: 20px 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.info-header{
+    color: white;
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+
+
+.icons-header{
+    display: flex; 
+    gap: 20px; 
+}
+
+/* Efeito de hover para TODOS os ícones no cabeçalho (mais robusto) */
+header [class*="fa-"] {
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.2s ease; 
+}
+
+header [class*="fa-"]:hover {
+    opacity: 0.8; 
+    transform: scale(1.15); 
+}
+/* --- FIM HEADER ---*/
