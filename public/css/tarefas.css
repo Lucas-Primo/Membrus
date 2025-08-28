@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#f9f9f9;;
+}
+
+/* Inicio Main */
+#main {
+    display: flex;
+    height: auto; 
+}
+
+/* Inicio Content */
+.content {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+}
+/* Fim Content */

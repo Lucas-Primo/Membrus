@@ -5,9 +5,10 @@
     background-color:#f9f9f9;;
 }
 
+/* Inicio Header */
 header {
     width: 100%;
-    height: 4rem; /* altura fixa do header */
+    height: 4rem; 
 }
 
 header iframe {
@@ -17,11 +18,9 @@ header iframe {
     display: block;
 }
 
-#main {
-    display: flex;
-    height: auto; /* ocupa o restante da tela abaixo do header */
-}
+/* Fim Header */
 
+/* Inicio Sidebar */
 .sidebar {
     width: 250px;
     height: auto;
@@ -30,13 +29,8 @@ header iframe {
 .sidebar iframe {
     display: fixed;
     width: 100%;
-    height: 400%;  /* agora preenche todo o espaço do #main */
+    height: 400%;  
     border: none;
     display: block;
 }
-
-.content {
-    flex: 1;
-    padding: 20px;
-    background: #f9f9f9;
-}
+/* Fim Sidebar */
