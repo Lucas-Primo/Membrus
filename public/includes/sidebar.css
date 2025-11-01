@@ -9,7 +9,7 @@
 
 .main {
     display: flex; /* Alinha a sidebar e o conteúdo lado a lado */
-    min-height: calc(100vh - 80px); /* Garante que a seção ocupe a altura da tela menos o cabeçalho */
+    min-height: 90vh; /* Garante que a seção ocupe a altura da tela menos o cabeçalho */
 }
 
 /* --- FIM MAIN CONTENT ---*/
