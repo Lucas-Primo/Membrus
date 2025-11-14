@@ -86,3 +86,39 @@ main {
 .formulario button:hover {
     background-color: #5a9bd3; /* Tom de azul mais claro ao passar o mouse */
 }
+/*Formatação do formulário de cadastro*/
+[popover] { 
+
+    min-width: fit-content;
+    min-height: fit-content;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Posiciona o popup no centro da tela */
+
+    padding: 20px;
+    justify-content: center;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    min-width: 100px;
+    min-height: 100px; /*Formatação generalista do popup*/
+
+}
+fieldset {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+[popover]::backdrop {
+    background-color: rgb(0 0 0/ 0.5); /*Deixa a tela mais escura ao aparecer o popup*/
+}
+
