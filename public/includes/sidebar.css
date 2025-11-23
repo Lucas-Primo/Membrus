@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* --- MAIN CONTENT ---*/
+
+.main {
+    display: flex; /* Alinha a sidebar e o conteúdo lado a lado */
+    min-height: 90vh; /* Garante que a seção ocupe a altura da tela menos o cabeçalho */
+}
+
+/* --- FIM MAIN CONTENT ---*/
+
+
+/* --- SIDEBAR ---*/
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa; /* Um cinza claro e suave */
+    padding: 20px;
+    border-right: 1px solid #dee2e6; /* Borda sutil para separar do conteúdo */
+}
+
+.sidebar nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px; /* Espaçamento entre os itens do menu */
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #343a40; /* Cor de texto escura para bom contraste */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li a i {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    width: 20px; /* Garante que os textos fiquem alinhados */
+    text-align: center;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #4682B4; /* Usa a cor principal do header no hover */
+    color: white;
+}
+
+/* Estilo para o link ativo na sidebar */
+.sidebar nav ul li a.active {
+    background-color: #4682B4;
+    color: white;
+    font-weight: bold; /* Destaque extra para o item ativo */
+}
+
+/* --- FIM SIDEBAR ---*/

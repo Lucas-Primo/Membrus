@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Inicio Main */
+#main {
+    display: flex;
+    height: auto; 
+}
+
+/* Inicio Content */
+.content {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.botao{
+    width: fit-content;
+    padding: 15px;
+    border: none;
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #4682B4; /* Cor azul do gradiente */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 5%;
+}
+/* Fim Content */

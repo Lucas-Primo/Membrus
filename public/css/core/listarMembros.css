@@ -1,0 +1,95 @@
+body{
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(to right, #87CEEB, #4682B4);
+}
+
+.container{
+    background-color: #ffffff;
+    border-radius: 15px;
+    gap: 15px;
+    padding: 7px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    max-height: 96vh;
+    overflow-y: auto;
+    position: relative;
+}
+.tabela-membros{
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4682B4;
+}
+
+.rtn-btn{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 2px;
+    top: 10px;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    border-collapse:collapse;
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+.titulos.membros th {
+    background-color: #4682B4;
+    color: white;
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #ccc;
+    font-size: 13px;
+    border: 1px solid #ccc;
+}
+
+.view-btn{
+    background-color: #4682B4;
+    color: #FFFF;
+    border-radius: 3px;
+}
+
+.view-btn:hover{
+    background-color: #138496;
+    color: #FFFF;
+}
+
+.edit-btn{
+    background-color: #4682B4;
+    color: #FFFF;
+    border-radius: 3px;
+}
+
+.edit-btn:hover{
+    background-color: #138496;
+    color: #FFFF;
+}
+
+.btn-delete{
+    background-color: #4682B4;
+    color: #FFFF;
+    border-radius: 3px;
+}
+
+.btn-delete:hover{
+    background-color: #138496;
+    color: #FFFF;
+}
+

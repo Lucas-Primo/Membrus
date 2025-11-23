@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Inicio Main */
+#main {
+    display: flex;
+    height: auto; 
+}
+
+/* Inicio Content */
+.content {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.content iframe{
+    width: 100%;
+    height: 85%;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Fim Content */
