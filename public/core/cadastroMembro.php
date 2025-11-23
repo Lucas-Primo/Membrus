@@ -82,7 +82,7 @@ $result = $connection->query($sql_code);
             <option value="Outro">Outro</option>
         </select>
 
-        <select class="dropbox" name="Cargo_Eclesiastico">
+        <select class="dropbox" name="Cargo_Eclesiastico"> 
             <option value="Membro">Membro (Padrão)</option>
             <option value="Diácono">Diácono</option>
             <option value="Presbítero">Presbítero</option>

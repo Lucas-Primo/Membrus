@@ -87,7 +87,7 @@ $membros = getAllMembros();
                             <td class="actions">
                                 <a href="verMembro.php?id=<?php echo $membro['ID']; ?>" class="view-btn">Inspecionar</a>
                                 <a href="editarMembro.php?id=<?php echo $membro['ID']; ?>" class="edit-btn">Editar</a>
-                                <a href="deletarMembro.php?id=<?php echo $membro['ID']; ?>" class="btn-delete" onclick="return confirm('Tem certeza que deseja deletar este membro?')">Deletar </a>
+                                <a href="deletarMembro.php?id=<?php echo $membro['ID']; ?>" class="btn-delete">Deletar </a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

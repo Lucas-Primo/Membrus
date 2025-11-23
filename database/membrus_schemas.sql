@@ -26,7 +26,6 @@ CREATE TABLE `membros` (
   `Endereco` varchar(200) DEFAULT NULL,
   `CEP` varchar(9) DEFAULT NULL,
   `Email` varchar(100) DEFAULT NULL,
-  `senha` varchar(50)  DEFAULT NULL,
   `Celular` varchar(15) DEFAULT NULL,
   `Telefone` varchar(14) DEFAULT NULL,
   `Naturalidade` varchar(50) DEFAULT NULL,
@@ -45,9 +44,10 @@ CREATE TABLE `membros` (
 
 CREATE TABLE `usuarios_login` (
   `ID` int(11) NOT NULL,
-  `Username` varchar(50) NOT NULL,
-  `Login` varchar(50) NOT NULL,
+  `Nome_Completo` varchar(50) NOT NULL,
+  `Login_email` varchar(100) NOT NULL,
   `Senha` varchar(255) NOT NULL,
+  `Cargo` enum('Coordenador', 'Secretário', 'Gerente') DEFAULT NULL,
   `Data_Criacao` timestamp NOT NULL DEFAULT current_timestamp(),
   `Ultimo_Login` timestamp NULL DEFAULT NULL,
   `Ativo` tinyint(1) DEFAULT 1
@@ -69,8 +69,6 @@ ALTER TABLE `membros`
 --
 ALTER TABLE `usuarios_login`
   ADD PRIMARY KEY (`ID`),
-  ADD UNIQUE KEY `Username` (`Username`),
-  ADD UNIQUE KEY `Login` (`Login`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas

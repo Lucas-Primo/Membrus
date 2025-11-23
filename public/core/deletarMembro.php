@@ -43,20 +43,21 @@ if (isset($membro['error'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/core/deletarMembro.css">
     <title>Deletar Membro - <?php echo htmlspecialchars($membro['Nome_Completo']); ?></title>
     
 </head>
 <body>
     <div class="container">
         <div class="warning-card">
-            <!-- Ícone de alerta -->
-            <div class="warning-icon">⚠️</div>
             
-            <h1>Confirmar Exclusão</h1>
+            <h1>Confirmaçao de Exclusão</h1>
             
-            <p style="color: #6c757d; margin-bottom: 25px; font-size: 1.1rem;">
-                Você está prestes a deletar permanentemente um membro do sistema.
+            <strong>
+            <p style="color: red ;  margin-bottom: 25px; font-size: 1.1rem;">
+                Você está prestes a deletar permanentemente um membro do sistema!
             </p>
+            </strong>
 
             <!-- Informações do membro -->
             <div class="member-info">
@@ -85,7 +86,8 @@ if (isset($membro['error'])) {
 
             <!-- Aviso importante -->
             <div class="warning-text">
-                ⚠️ ATENÇÃO: Esta ação não pode ser desfeita! Todos os dados deste membro serão permanentemente excluídos.
+                <br>
+                <strong>ATENÇÃO:</strong> Esta ação <strong>NÃO</strong> pode ser desfeita! Todos os dados deste membro serão <strong>pemanentemente excluídos.</strong>
             </div>
 
             <!-- Mensagens de erro -->
@@ -98,11 +100,12 @@ if (isset($membro['error'])) {
             <!-- Formulário de confirmação -->
             <form action="" method="post">
                 <div class="actions">
-                    <a href="listarMembros.php?id=<?php echo $membro['ID']; ?>" class="btn btn-cancel">
-                        ← Cancelar
-                    </a>
+                    <button onClick=" window.location.href='listarMembros.php?id=<?php echo $membro['ID']; ?>'" class="btn btn-cancel">
+                    Cancelar
+                    </button>
+                  
                     <button type="submit" name="confirmar" value="sim" class="btn btn-delete" onclick="return confirm('Tem certeza ABSOLUTA que deseja deletar este membro? Esta ação é IRREVERSÍVEL!');">
-                        Deletar Permanentemente
+                        Deletar
                     </button>
                     
                 </div>

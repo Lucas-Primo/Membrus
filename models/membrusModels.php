@@ -21,7 +21,43 @@ function getDbConnection() {
     return $mysqli;
 }
 
-//Função para cadastrar um novo membro
+//Função para cadastrar um novo membro administrativo
+function criarMembroAdmin() {
+    // Verificar se é uma requisição POST
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        return false;
+    }
+
+    $connection = getDbConnection();
+    
+    // Coletar dados do formulário
+    $nome = mysqli_real_escape_string($connection, $_POST['Nome_login']);
+    $email = mysqli_real_escape_string($connection, $_POST['Login_email']);
+    $senha = mysqli_real_escape_string($connection, $_POST['Senha_login']);
+    $cargo = mysqli_real_escape_string($connection, $_POST['Cargo']);
+
+    // Query de inserção
+    $sql = "INSERT INTO usuarios_login (Nome_Completo, Login_email, Senha, Cargo) 
+            VALUES ('$nome', '$email', '$senha', '$cargo' )";
+
+    $result = mysqli_query($connection, $sql);
+
+    if ($result) {
+        echo '<script>
+                alert("Membro cadastrado com sucesso!");
+                window.location.href = "configuracoes.php";
+            </script>';
+        return true;
+    } else {
+        echo '<script>
+                alert("Erro ao cadastrar membro: ' . mysqli_error($connection) . '");
+            </script>';
+        return false;
+    }
+
+    mysqli_close($connection);
+}
+
 function criarMembro() {
     // Verificar se é uma requisição POST
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -253,7 +289,7 @@ function verificar_login() {
         $senha = $mysqli->real_escape_string($_POST['senha']);
 
         // Busca usuário
-        $sql = "SELECT * FROM membros WHERE Email = '$email' AND senha = '$senha'";
+        $sql = "SELECT * FROM usuarios_login WHERE Login_email = '$email' AND Senha = '$senha'";
         $query = $mysqli->query($sql);
 
         if ($query->num_rows === 1) {

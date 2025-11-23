@@ -16,4 +16,64 @@
     padding: 20px;
     background: #f9f9f9;
 }
+
+/*Formatação do popup de cadastro de administradores*/
+.pop-cadastro-adm{
+    background-color: white;
+    min-width: 500px;
+    min-height: 500px;
+    position: fixed;
+    top: 20%;
+    left: 37%;
+    border-radius: 15px;
+    border: none;
+    padding: 25px;
+}
+
+.pop-cadastro-adm::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cadastro-adm{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+}
+
+.cadastro-adm input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.dropbox {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.botao{
+    width: fit-content;
+    padding: 15px;
+    border: none;
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #4682B4; /* Cor azul do gradiente */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2%;
+}
+
+
+
+
 /* Fim Content */
