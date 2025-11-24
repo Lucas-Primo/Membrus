@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `membros` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `CPF` varchar(14) NOT NULL,
   `Nome_Completo` varchar(100) NOT NULL,
   `Data_Nascimento` date DEFAULT NULL,
@@ -33,7 +33,8 @@ CREATE TABLE `membros` (
   `Batizado_Aguas` tinyint(1) DEFAULT 0,
   `Departamento` enum('Jovens','Senhoras','Missões','Crianças','Novos Convertidos','Varões','Adolescentes','Outro') DEFAULT NULL,
   `Cargo_Eclesiastico` enum('Membro','Diácono','Presbítero','Pastor','Missionário','Evangelista','Auxiliar','Líder','Coordenador') DEFAULT NULL,
-  `Membro_Desde` date DEFAULT NULL
+  `Membro_Desde` date DEFAULT NULL,
+  PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -43,14 +44,15 @@ CREATE TABLE `membros` (
 --
 
 CREATE TABLE `usuarios_login` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Nome_Completo` varchar(50) NOT NULL,
   `Login_email` varchar(100) NOT NULL,
   `Senha` varchar(255) NOT NULL,
   `Cargo` enum('Coordenador','Secretário','Gerente') DEFAULT NULL,
   `Data_Criacao` timestamp NOT NULL DEFAULT current_timestamp(),
   `Ultimo_Login` timestamp NULL DEFAULT NULL,
-  `Ativo` tinyint(1) DEFAULT 1
+  `Ativo` tinyint(1) DEFAULT 1,
+  PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -61,7 +63,6 @@ CREATE TABLE `usuarios_login` (
 -- Índices de tabela `membros`
 --
 ALTER TABLE `membros`
-  ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `CPF` (`CPF`);
 COMMIT;
 
