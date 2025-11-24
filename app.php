@@ -4,12 +4,19 @@
 @include_once __DIR__ . '/config/config.php';
 @include_once __DIR__ . '/models/membrusModels.php';
 
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     verificar_login();
     exit;
 }
-
 ?>
+
+<?php
+
+//Criar o banco caso não existir
+    include("models/selecBanco.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
