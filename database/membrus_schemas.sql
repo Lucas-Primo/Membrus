@@ -47,7 +47,7 @@ CREATE TABLE `usuarios_login` (
   `Nome_Completo` varchar(50) NOT NULL,
   `Login_email` varchar(100) NOT NULL,
   `Senha` varchar(255) NOT NULL,
-  `Cargo` enum('Coordenador', 'Secretário', 'Gerente') DEFAULT NULL,
+  `Cargo` enum('Coordenador','Secretário','Gerente') DEFAULT NULL,
   `Data_Criacao` timestamp NOT NULL DEFAULT current_timestamp(),
   `Ultimo_Login` timestamp NULL DEFAULT NULL,
   `Ativo` tinyint(1) DEFAULT 1
@@ -63,28 +63,6 @@ CREATE TABLE `usuarios_login` (
 ALTER TABLE `membros`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `CPF` (`CPF`);
-
---
--- Índices de tabela `usuarios_login`
---
-ALTER TABLE `usuarios_login`
-  ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT para tabelas despejadas
---
-
---
--- AUTO_INCREMENT de tabela `membros`
---
-ALTER TABLE `membros`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `usuarios_login`
---
-ALTER TABLE `usuarios_login`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

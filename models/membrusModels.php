@@ -73,7 +73,6 @@ function criarMembro() {
     $endereco = mysqli_real_escape_string($connection, $_POST['endereco']);
     $cep = mysqli_real_escape_string($connection, $_POST['cep']);
     $email = mysqli_real_escape_string($connection, $_POST['email']);
-    $senha = mysqli_real_escape_string($connection, $_POST['senha']);
     $celular = mysqli_real_escape_string($connection, $_POST['celular']);
     $telefone = mysqli_real_escape_string($connection, $_POST['telefone'] ?? '');
     $naturalidade = mysqli_real_escape_string($connection, $_POST['naturalidade']);
@@ -84,8 +83,8 @@ function criarMembro() {
     $cargo_eclesiastico = mysqli_real_escape_string($connection, $_POST['Cargo_Eclesiastico'] ?? 'Membro');
 
     // Query de inserção
-    $sql = "INSERT INTO membros (CPF, Nome_Completo, Data_Nascimento, Endereco, CEP, Email, Celular, Telefone, Naturalidade, Nacionalidade, Batizado_Aguas, Departamento, Cargo_Eclesiastico, Membro_Desde, senha) 
-            VALUES ('$cpf', '$nome_completo', '$data_nascimento', '$endereco', '$cep', '$email', '$celular', '$telefone', '$naturalidade', '$nacionalidade', '$batizado_aguas', '$departamento', '$cargo_eclesiastico', '$membro_desde', '$senha')";
+    $sql = "INSERT INTO membros (CPF, Nome_Completo, Data_Nascimento, Endereco, CEP, Email, Celular, Telefone, Naturalidade, Nacionalidade, Batizado_Aguas, Departamento, Cargo_Eclesiastico, Membro_Desde) 
+            VALUES ('$cpf', '$nome_completo', '$data_nascimento', '$endereco', '$cep', '$email', '$celular', '$telefone', '$naturalidade', '$nacionalidade', '$batizado_aguas', '$departamento', '$cargo_eclesiastico', '$membro_desde')";
 
     $result = mysqli_query($connection, $sql);
 

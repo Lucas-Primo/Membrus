@@ -21,7 +21,7 @@
                     <p class="email">email@mail.com</p>
                 </div>
 
-                <a href="logout.php" class="logoff-button">
+                <a href="/app.php" class="logoff-button">
                     <i class="fa-solid fa-right-from-bracket"></i> Sair / Logoff
                 </a>
 
