@@ -68,7 +68,7 @@ ALTER TABLE `membros`
 -- Índices de tabela `usuarios_login`
 --
 ALTER TABLE `usuarios_login`
-  ADD PRIMARY KEY (`ID`),
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
