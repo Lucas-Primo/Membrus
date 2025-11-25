@@ -30,8 +30,7 @@
         <section class="content">
             <h1>Gestão de Departamentos</h1>
             <p>Aqui vai o conteúdo principal</p>
-            <button class="botao"  type="button" onClick="window.location.href='core/cadastroMembro.php'">Cadastrar Membros</button>
-            <button class="botao" type="button" onclick="window.location.href='core/listarMembros.php'">Lista de Membros</button>
+           
         </section>
 
         <!--Fim Content-->

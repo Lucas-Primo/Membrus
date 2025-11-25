@@ -15,5 +15,29 @@
     flex: 1;
     padding: 20px;
     background: #f9f9f9;
+    align-items: center;
 }
+
+#main img {
+    width: 10%;
+    
+}
+
+.construcao h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 60px;
+    color: #4682B4;
+}
+
+.construcao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; 
+    margin-top: 2%;
+}
+
+
 /* Fim Content */

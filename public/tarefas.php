@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/tarefas.css">
+    <link rel="stylesheet" href="./css/relatorios.css">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./includes/header.css">
     <link rel="stylesheet" href="./includes/sidebar.css">
@@ -28,8 +28,13 @@
 
         <!--Inicio Content-->
         <section class="content">
-            <h1>Visão de Tarefas</h1>
-            <p>Aqui vai o conteúdo principal</p>
+
+
+            <div class="construcao">
+                <img src="./img/construcao.png" alt="Em construção">
+                <h1>Página em Contrução</h1>
+
+            </div>
         </section>
         <!--Fim Content-->
 

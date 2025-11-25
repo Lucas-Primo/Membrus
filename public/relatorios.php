@@ -28,8 +28,13 @@
 
         <!--Inicio Content-->
         <section class="content">
-            <h1>Relatórios</h1>
-            <p>Aqui vai o conteúdo principal</p>
+
+
+            <div class="construcao">
+                <img src="./img/construcao.png" alt="Em construção">
+                <h1>Página em Contrução</h1>
+
+            </div>
         </section>
         <!--Fim Content-->
 

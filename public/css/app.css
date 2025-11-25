@@ -33,18 +33,20 @@ main {
     
 }
 
+.login-conteiner img{
+    width: 90%;
+    height: auto;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: -20%;
+    margin-bottom: -30%;
+}
+
 .formulario {
     width: 100%; /* Faz o formulário ocupar toda a largura do contêiner */
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-/* Estilo para um título (ex: <h2>Login</h2>) dentro do contêiner */
-.login-conteiner h2 {
-    color: #444;
-    font-weight: 600;
-    margin-bottom: 25px; /* Aumenta o espaço abaixo do título */
 }
 
 /* Estilos para os campos de texto (email, senha) */
@@ -55,7 +57,7 @@ main {
     border-radius: 10px; /* Bordas arredondadas */
     font-size: 16px;
     transition: all 0.3s ease;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .formulario p{
@@ -86,3 +88,5 @@ main {
 .formulario button:hover {
     background-color: #5a9bd3; /* Tom de azul mais claro ao passar o mouse */
 }
+
+

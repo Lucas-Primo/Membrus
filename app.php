@@ -30,13 +30,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     <main>
 
-        <div class="image">
     
-        </div>
-
         <div class="login-conteiner">
-            <h1>Login</h1>
+
+            
             <div class="formulario">
+
+                <div class="image">
+                    <img src="./public/img/Membrus-Logo-Azul 2.png" alt="">
+                </div>
                 <form action="app.php" method="post">
                     <p>E-mail</p>
                     <input type="email" id="email" name="email" required>
