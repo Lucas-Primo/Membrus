@@ -31,6 +31,19 @@
             <h1>Gestão de Departamentos</h1>
             <p>Aqui vai o conteúdo principal</p>
            
+
+            <!-- Cards dos Departamentos -->
+            <div class="cards-container">
+                <div class="card">Jovens</div>
+                <div class="card">Senhoras</div>
+                <div class="card">Missões</div>
+                <div class="card">Crianças</div>
+                <div class="card">Novos Convertidos</div>
+                <div class="card">Varões</div>
+                <div class="card">Adolescentes</div>
+                <div class="card">Outro</div>
+            </div>
+
         </section>
 
         <!--Fim Content-->
