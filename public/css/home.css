@@ -4,25 +4,55 @@
     box-sizing: border-box;
 }
 
+html{
+    overflow: hidden;
+}
+
 /* Inicio Main */
 #main {
     display: flex;
-    height: auto; 
+    min-height: 90vh;
 }
 
 /* Inicio Content */
 .content {
     flex: 1;
     padding: 20px;
+    padding-bottom: 0;
     background: #f9f9f9;
 }
 
 .content iframe{
-
     margin-top: 5px;
     width: 100%;
     height: 90vh;
 }
+
+.listarMembros iframe{
+    max-height: 250px;
+}
+
+/* Cards Informativos */
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    max-width: 100%;
+}
+
+.card{
+    background-color: #4682B4;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    /* Background */
+    background-image: url('https://img.icons8.com/ios-filled/100/ffffff/user-group-man-man.png');
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: 20px center;
+}
+
 
 /* Botão de Cadastro Simples */
 .cadastro-membros {

@@ -18,16 +18,17 @@ $membros = getAllMembros();
 </head>
 <body>
     <div class="container">
-        <h1>Lista Completa de Membros</h1>
-        <button class="rtn-btn" onClick="window.location.href='../departaments.php'"><i class="fa-solid fa-x"></i></button>
-        
-        <!-- Cabeçalho com ação de criar novo membro e total de membros -->
-        <div class="header-actions">
-            <div class="total-members">
-               
-               <strong> Total de Membros cadastrados: <?php echo is_array($membros) ? count($membros) : 0; ?></strong>
+            <h1>Lista Completa de Membros</h1>
+            <!-- <button class="rtn-btn" onClick="window.location.href='../departaments.php'"><i class="fa-solid fa-x"></i></button> -->
+            
+            <!-- Cabeçalho com ação de criar novo membro e total de membros -->
+            <div class="header-actions">
+                <div class="total-members">
+                
+                <strong> Total de Membros cadastrados: <?php echo is_array($membros) ? count($membros) : 0; ?></strong>
+                </div>
             </div>
-        </div>
+
         
         <!-- Mensagem de sucesso -->
         <?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>

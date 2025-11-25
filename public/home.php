@@ -45,6 +45,17 @@ if (!isset($_SESSION)){
             <button class="botao" type="button" onclick="abrirPopupCadastro()">Cadastrar Membros</button>
         </section>
 
+    <!-- Cards informativos -->
+    <div class="cards-container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+<br>
+
     <!-- Popup/Modal para cadastro -->
         <div id="popupCadastro" class="popup-overlay">
             <div class="popup-content">
