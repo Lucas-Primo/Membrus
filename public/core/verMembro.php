@@ -23,7 +23,7 @@ if (isset($membro['error'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/core/verMembro.css">
+    <link rel="stylesheet" href="../css/coreStyles/verMembro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Detalhes do Membro - <?php echo htmlspecialchars($membro['Nome_Completo']); ?></title>
     
@@ -37,101 +37,95 @@ if (isset($membro['error'])) {
         </div>
 
         <!-- Grid de informações -->
-        <div class="details-grid">
-            <!-- Informações Pessoais -->
-            <div class="detail-card">
-                <u><h3>Informações Pessoais</h3></u>
-                <br>
-                <fieldset>
-                <div class="detail-item">
-                    <span class="detail-label">CPF:</span>
-                    <span class="detail-value"><?php echo htmlspecialchars($membro['CPF']); ?></span>
+       <div class="form-container">
+            <div class="form-grid">
+                <!-- Informações Pessoais -->
+                <div class="form-group">
+                    <label>CPF</label>
+                    <div class="detail-value"><?php echo htmlspecialchars($membro['CPF']); ?></div>
                 </div>
-                <div class="detail-item">
-                    <span class="detail-label">Data Nasc.:</span>
-                    <span class="detail-value"><?php echo date('d/m/Y', strtotime($membro['Data_Nascimento'])); ?></span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Naturalidade:</span>
-                    <span class="detail-value"><?php echo htmlspecialchars($membro['Naturalidade']); ?></span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Nacionalidade:</span>
-                    <span class="detail-value"><?php echo htmlspecialchars($membro['Nacionalidade']); ?></span>
-                </div>
-                </fieldset>
-            </div>
 
-            <!-- Informações de Contato -->
-            <div class="detail-card">
-                <u><h3>Contato</h3></u>
-              <fieldset>
-                <div class="detail-item">
-                    <span class="detail-label">Email:</span>
-                    <span class="detail-value"><?php echo htmlspecialchars($membro['Email']); ?></span>
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <div class="detail-value"><?php echo htmlspecialchars($membro['Nome_Completo']); ?></div>
                 </div>
-                <div class="detail-item">
-                    <span class="detail-label">Celular:</span>
-                    <span class="detail-value"><?php echo htmlspecialchars($membro['Celular']); ?></span>
+
+                <div class="form-group">
+                    <label>Data de Nascimento</label>
+                    <div class="detail-value"><?php echo date('d/m/Y', strtotime($membro['Data_Nascimento'])); ?></div>
                 </div>
-                <div class="detail-item">
-                    <span class="detail-label">Telefone:</span>
-                    <span class="detail-value">
+
+                <div class="form-group">
+                    <label>Naturalidade</label>
+                    <div class="detail-value"><?php echo htmlspecialchars($membro['Naturalidade']); ?></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Nacionalidade</label>
+                    <div class="detail-value"><?php echo htmlspecialchars($membro['Nacionalidade']); ?></div>
+                </div>
+
+                <!-- Contato -->
+                <div class="form-group">
+                    <label>Email</label>
+                    <div class="detail-value"><?php echo htmlspecialchars($membro['Email']); ?></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Celular</label>
+                    <div class="detail-value"><?php echo htmlspecialchars($membro['Celular']); ?></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Telefone</label>
+                    <div class="detail-value">
                         <?php echo !empty($membro['Telefone']) ? htmlspecialchars($membro['Telefone']) : '<span class="empty-field">Não informado</span>'; ?>
-                    </span>
+                    </div>
                 </div>
-              </fieldset>
-            </div>
 
-            <!-- Endereço -->
-            <div class="detail-card">
-                <u><h3>Endereço</h3></u>
-              <fieldset>
-                <u><div class="detail-item"></u>
-                    <span class="detail-label">Endereço:</span>
-                    <span class="detail-value"><?php echo htmlspecialchars($membro['Endereco']); ?></span>
+                <!-- Endereço -->
+                <div class="form-group full-width">
+                    <label>Endereço</label>
+                    <div class="detail-value"><?php echo htmlspecialchars($membro['Endereco']); ?></div>
                 </div>
-                <div class="detail-item">
-                    <span class="detail-label">CEP:</span>
-                    <span class="detail-value"><?php echo htmlspecialchars($membro['CEP']); ?></span>
-                </div>
-              </fieldset>
-            </div>
 
-            <!-- Informações Eclesiásticas -->
-            <div class="detail-card">
-                <u><h3>Informações Eclesiásticas</h3></u>
-              <fieldset>
-                <div class="detail-item">
-                    <span class="detail-label">Membro desde:</span>
-                    <span class="detail-value"><?php echo date('d/m/Y', strtotime($membro['Membro_Desde'])); ?></span>
+                <div class="form-group">
+                    <label>CEP</label>
+                    <div class="detail-value"><?php echo htmlspecialchars($membro['CEP']); ?></div>
                 </div>
-                <div class="detail-item">
-                    <span class="detail-label">Batizado:</span>
-                    <span class="detail-value">
+
+                <!-- Informações Eclesiásticas -->
+                <div class="form-group">
+                    <label>Membro Desde</label>
+                    <div class="detail-value"><?php echo date('d/m/Y', strtotime($membro['Membro_Desde'])); ?></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Batizado nas Águas?</label>
+                    <div class="detail-value">
                         <span class="badge <?php echo ($membro['Batizado_Aguas'] == 1) ? 'badge-batizado' : 'badge-nao-batizado'; ?>">
                             <?php echo ($membro['Batizado_Aguas'] == 1) ? 'Sim' : 'Não'; ?>
                         </span>
-                    </span>
+                    </div>
                 </div>
-                <div class="detail-item">
-                    <span class="detail-label">Departamento:</span>
-                    <span class="detail-value">
+
+                <div class="form-group">
+                    <label>Departamento</label>
+                    <div class="detail-value">
                         <?php if (!empty($membro['Departamento'])): ?>
                             <span class="badge badge-departamento"><?php echo htmlspecialchars($membro['Departamento']); ?></span>
                         <?php else: ?>
                             <span class="empty-field">Não definido</span>
                         <?php endif; ?>
-                    </span>
-                  
+                    </div>
                 </div>
-                <div class="detail-item">
-                    <span class="detail-label">Cargo:</span>
-                    <span class="detail-value">
+                        
+                <div class="form-group">
+                    <label>Cargo Eclesiástico</label>
+                    <div class="detail-value">
                         <span class="badge badge-cargo"><?php echo htmlspecialchars($membro['Cargo_Eclesiastico'] ?? 'Membro'); ?></span>
-                    </span>
+                    </div>
                 </div>
-              </fieldset>
             </div>
         </div>
 

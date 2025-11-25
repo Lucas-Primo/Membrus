@@ -50,4 +50,29 @@ function validaCPF(cpf) {
   return true
 }
 
+// Funções para abrir e fechar o popup
+function abrirPopupCadastro() {
+    document.getElementById('popupCadastro').style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Previne scroll da página principal
+}
+
+function fecharPopupCadastro() {
+    document.getElementById('popupCadastro').style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restaura scroll
+}
+
+// Fechar popup clicando fora do conteúdo
+document.getElementById('popupCadastro').addEventListener('click', function(e) {
+    if (e.target === this) {
+        fecharPopupCadastro();
+    }
+});
+
+// Fechar popup com tecla ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        fecharPopupCadastro();
+    }
+});
+
 //CPF fim

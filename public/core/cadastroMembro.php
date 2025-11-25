@@ -20,7 +20,7 @@ $result = $connection->query($sql_code);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/core/cadastroMembro.css"> 
+    <link rel="stylesheet" href="../css/coreStyles/cadastroMembro.css"> 
     <title>Cadastrar Membro</title>
 </head>
 <body>
@@ -96,7 +96,6 @@ $result = $connection->query($sql_code);
         <!-- Fim Selects para Departamento e Cargo Eclesiástico -->
 
          <button type="submit" onclick>Cadastrar Membro</button>
-         <button type="button" onClick="window.location.href= '../departaments.php'">Voltar</button>
 
 
         </div> 

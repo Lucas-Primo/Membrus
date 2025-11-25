@@ -38,8 +38,30 @@ if (!isset($_SESSION)){
 
         <!--Inicio Content-->
         <section class="content">
-            <h1>Página Inicial</h1>
+            <h1>Visão Geral</h1>
             <p>Aqui vai o conteúdo principal</p>
+
+        <section class="cadastro-membros">
+            <button class="botao" type="button" onclick="abrirPopupCadastro()">Cadastrar Membros</button>
+        </section>
+
+    <!-- Popup/Modal para cadastro -->
+        <div id="popupCadastro" class="popup-overlay">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <h2>Cadastrar Novo Membro</h2>
+                    <button class="popup-close" onclick="fecharPopupCadastro()">&times;</button>
+                </div>
+                <div class="popup-body">
+                    <iframe src="./core/cadastroMembro.php" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+            <aside class="listarMembros">
+                <iframe src="./core/listarMembros.php" frameborder="0"></iframe>
+            </aside>
+
         </section>
         <!--Fim Content-->
 
@@ -51,6 +73,6 @@ if (!isset($_SESSION)){
 
     </div>
     <!--Fim Main-->
-
+    <script src="./script/fuctionsCRUD.js"></script>
 </body>
 </html>

@@ -36,6 +36,7 @@ if (isset($membro['error'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/coreStyles/editarMembro.css">
     <title>Editar Membro - <?php echo htmlspecialchars($membro['Nome_Completo']); ?></title>
     
 </head>
@@ -164,14 +165,9 @@ if (isset($membro['error'])) {
 
                 <!-- Botões de ação -->
                 <div class="actions">
-                    <a href="verMembro.php?id=<?php echo $membro['ID']; ?>" class="btn btn-back">
-                        ← Cancelar
-                    </a>
-                    <button type="submit" class="btn btn-submit">
-                        💾 Salvar Alterações
-                    </button>
+                    <button type="submit" class="btn btn-submit"> <p>Salvar alterações</p></button>
                     <a href="listarMembros.php" class="btn btn-cancel">
-                        🏠 Voltar para Lista
+                        <p>Cancelar</p>
                     </a>
                 </div>
             </form>

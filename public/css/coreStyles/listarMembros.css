@@ -1,7 +1,6 @@
 body{
     font-family: 'Arial', sans-serif;
-    color: #333;
-    background: linear-gradient(to right, #87CEEB, #4682B4);
+    margin: 0;
 }
 
 .container{
@@ -60,36 +59,31 @@ td {
     border: 1px solid #ccc;
 }
 
-.view-btn{
-    background-color: #4682B4;
-    color: #FFFF;
+.btn-view{
+    color: #4682B4;
     border-radius: 3px;
 }
 
-.view-btn:hover{
-    background-color: #138496;
-    color: #FFFF;
+.btn-view:hover{
+    color: #094d84;
 }
 
-.edit-btn{
-    background-color: #4682B4;
-    color: #FFFF;
+.btn-edit{
+    color: #4682B4;
     border-radius: 3px;
 }
 
-.edit-btn:hover{
-    background-color: #138496;
-    color: #FFFF;
+.btn-edit:hover{
+    color: #094d84;
 }
 
 .btn-delete{
-    background-color: #4682B4;
-    color: #FFFF;
+    color: #4682B4;
     border-radius: 3px;
 }
 
 .btn-delete:hover{
-    background-color: #138496;
-    color: #FFFF;
+    color: #094d84;
 }
+
 
